@@ -20,3 +20,23 @@ cd Movie-Recommendation-System
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Run the main script
+python main.py
+
+Enter your favorite movies or preferences.
+
+The system will recommend similar movies.
+
+Dataset
+
+Include a movies.csv or similar file in the repository. Ensure the dataset contains movie titles, genres, and other relevant metadata.
+
+Contributing
+
+Contributions are welcome! Feel free to submit issues or pull requests.
+
+License
+
+This project is licensed under the MIT License - see the LICENSE
+ file for details.
