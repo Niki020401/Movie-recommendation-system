@@ -1,0 +1,14 @@
+movie_recommender/
+│
+├── app.py
+├── create_index.py   ← keep it here
+├── requirements.txt
+├── templates/
+│   └── index.html
+├── static/
+│   └── styles.css
+├── models/
+│   ├── movies_meta.pkl
+│   └── movie_index.faiss
+└── data/
+    └── movies.csv
