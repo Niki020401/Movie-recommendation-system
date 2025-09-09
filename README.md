@@ -9,6 +9,9 @@ A Python-based system that recommends movies based on user preferences using FAI
 - Supports large movie datasets
 - Easy to extend with new datasets
 
+## Output
+Link : http://127.0.0.1:5000
+
 ## Installation
 
 ```bash
