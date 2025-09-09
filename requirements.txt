@@ -1,0 +1,4 @@
+Flask==2.3.2
+pandas==2.1.0
+numpy==1.25.2
+faiss-cpu==1.7.4
