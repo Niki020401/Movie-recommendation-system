@@ -12,10 +12,7 @@ with open("models/movies_meta.pkl", "rb") as f:
     movies_data, vectorizer, feature_matrix = pickle.load(f)
 
 index = faiss.read_index("models/movie_index.faiss")
-print(movies_data.keys() if hasattr(movies_data, "keys") else movies_data.columns)
 title_map = {title.lower(): i for i, title in enumerate(movies_data['title'])}
-
-
 
 # Recommendation function
 def get_recommendations(movie_name, top_n=10):
