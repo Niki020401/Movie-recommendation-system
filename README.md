@@ -1,42 +1,86 @@
-# Movie Recommendation System
+# 🎬 Movie Recommendation System  
 
-A Python-based system that recommends movies based on user preferences using FAISS for efficient similarity search.
+**High-performance movie recommendation system powered by SBERT embeddings and FAISS for real-time semantic search.**
 
-## Features
+---
 
-- Recommend movies based on user input
-- Uses FAISS for fast similarity search
-- Supports large movie datasets
-- Easy to extend with new datasets
+## 🚀 Why This Project Exists  
 
-## Installation
+Traditional recommendation systems rely on:  
+- **Keyword matching** (shallow and inaccurate)  
+- **Ratings-based filtering** (limited personalization)  
+
+These approaches fail to understand **user intent**.
+
+This system solves the problem using **semantic search + vector similarity**, allowing users to describe movies in natural language and receive accurate recommendations instantly.
+
+---
+
+## 🧠 System Architecture  
+
+### 🔹 1. Semantic Encoding (SBERT)  
+- Converts movie metadata (title, overview, genre, cast) into **dense embeddings**  
+- Converts user queries into the **same vector space**  
+- Captures **context, intent, and meaning**  
+
+**Example:**  
+> “time-loop psychological thriller” ≈ “mind-bending sci-fi paradox”  
+
+---
+
+### 🔹 2. Vector Indexing (FAISS)  
+- Stores embeddings in a **FAISS index**  
+- Uses **Approximate Nearest Neighbor (ANN)** search  
+- Reduces complexity from **O(n)** to near constant time  
+
+⚡ **Result:** Millisecond-level retrieval  
+
+---
+
+### 🔹 3. Recommendation Engine  
+- Retrieves **Top-K similar movies**  
+- Refines ranking using:  
+  - Metadata filters (year, rating, genre)  
+  - Relevance scoring  
+
+---
+
+## ⚙️ Key Features  
+
+- ✔ Natural Language Querying  
+- ✔ Semantic Search (not keyword-based)  
+- ✔ High-Speed FAISS Retrieval  
+- ✔ Scalable Vector Architecture  
+- ✔ Dynamic Query Filtering  
+- ✔ Extensible Hybrid Recommendation Design  
+
+---
+
+## 🛠️ Tech Stack  
+
+| Layer          | Technology                          |
+|----------------|------------------------------------|
+| NLP            | Sentence-BERT (`all-MiniLM-L6-v2`) |
+| Vector Search  | FAISS                              |
+| Backend        | Python                             |
+| UI             | Streamlit                          |
+| Data Handling  | Pandas, NumPy                      |
+
+---
+
+## 📊 Performance Highlights  
+
+- Efficient handling of **high-dimensional embeddings**  
+- Retrieval latency in **milliseconds**  
+- Scales to **large datasets** without brute-force search  
+- Outperforms traditional filtering approaches  
+
+---
+
+## 📦 Setup  
 
 ```bash
-# Clone the repository
-git clone https://github.com/YourUsername/Movie-Recommendation-System.git
-
-# Navigate to the project folder
-cd Movie-Recommendation-System
-
-# Install dependencies
+git clone https://github.com/your-username/CineSage.git
+cd CineSage
 pip install -r requirements.txt
-
-# Run the main script
-python main.py
-
-Enter your favorite movies or preferences.
-
-The system will recommend similar movies.
-
-Dataset
-
-Include a movies.csv or similar file in the repository. Ensure the dataset contains movie titles, genres, and other relevant metadata.
-
-Contributing
-
-Contributions are welcome! Feel free to submit issues or pull requests.
-
-License
-
-This project is licensed under the MIT License - see the LICENSE
- file for details.
+streamlit run app.py
